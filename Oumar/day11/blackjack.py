@@ -1,5 +1,7 @@
 import random
 print("WELCOME TO BLACK JACK")
+
+
 def play_game():
 
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
@@ -21,11 +23,11 @@ def play_game():
         print(f"Your cards: {user_cards}, current score: {user_score}")
         print(f"Computer's first card: {computer_cards[0]}")
 
-        if user_score == 21 or computer_score == 21:
+        if user_score > 21 or computer_score > 21:
             game_over = True
 
         else:
-            user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
+            user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ").lower()
 
             if user_should_deal == "y":
                 user_cards.append(random.choice(cards))
@@ -55,5 +57,7 @@ def play_game():
     else:
         print("You lose")
 
-while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
+
+while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ").lower() == "y":
     play_game()
+
