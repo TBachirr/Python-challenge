@@ -1,0 +1,80 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #8A2BE2, #4B0082);
+}
+.game-container {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    max-width: 90%;
+    width: auto;
+}
+h1 {
+    color: #4B0082;
+    margin-bottom: 20px;
+}
+#difficultyDisplay, #currentPlayer {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #8A2BE2;
+}
+.board {
+    display: inline-grid;
+    grid-gap: 10px;
+    margin: 20px auto;
+}
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border: 2px solid #8A2BE2;
+    border-radius: 10px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.cell:hover {
+    background-color: #e0e0e0;
+}
+button {
+    padding: 12px 24px;
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+button:hover {
+    background-color: #4B0082;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+.score-link {
+    margin-top: 20px;
+}
+.score-link a {
+    color: #8A2BE2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .cell {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+}

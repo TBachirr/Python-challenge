@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Scores</title>
+    <link rel="stylesheet" href="scores.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scores-container">
+        <h1>Tic-Tac-Toe Scores</h1>
+        <h2>Partie actuelle</h2>
+        <div id="difficultyDisplay"></div>
+        <table id="scoresTable">
+            <tr>
+                <th id="playerXName">Joueur X</th>
+                <th id="playerOName">Joueur O</th>
+                <th>Matchs nuls</th>
+            </tr>
+            <tr id="scoresRow">
+                <td id="scoreX">0</td>
+                <td id="scoreO">0</td>
+                <td id="scoreTies">0</td>
+            </tr>
+        </table>
+        <h2>Historique des joueurs</h2>
+        <table id="playerHistory">
+            <!-- Player history will be inserted here by JavaScript -->
+        </table>
+        <div class="button-container">
+            <button onclick="newGame()">Nouvelle partie</button>
+            <button onclick="resetScores()">Réinitialiser les scores</button>
+            <button onclick="returnToPlayerPage()">Changer de joueurs</button>
+        </div>
+    </div>
+    <script src="scores.js"></script>
+</body>
+</html>

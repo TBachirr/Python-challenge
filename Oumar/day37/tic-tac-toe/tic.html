@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tic.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Tic-Tac-Toe</h1>
+        <div id="difficultyDisplay"></div>
+        <div id="currentPlayer"></div>
+        <div class="board" id="board"></div>
+        <button id="newGameBtn">Nouvelle partie</button>
+        <button onclick="changePlayers()">Changer de joueurs</button>
+        <div class="score-link">
+            <a href="scores.html">Voir les scores</a>
+        </div>
+    </div>
+    <script src="tic.js"></script>
+</body>
+</html>
+
+
+    <div class="error-message">
+        <p>Désolé, une erreur s'est produite. Veuillez réessayer plus tard.</p>
+        <button onclick="location.reload()">Recharger la page</button>
+    </div>
+    <script>
+        window.addEventListener('error', function(event) {
+            document.querySelector('.game-container').style.display = 'none';
+            document.querySelector('.error-message').style.display = 'block';
+            console.error('Une erreur s\'est produite:', event.error);
+        });
+    </script>
